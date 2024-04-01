@@ -1,0 +1,48 @@
+@import "../../scss/common/vars";
+
+.header {
+	padding: 20px 0;
+
+	&-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&-logo {
+		font-family: $ff-logo;
+		font-weight: $fw-regular;
+		line-height: $lh-title;
+		font-size: 40px;
+		color: $black;
+	}
+
+	&-nav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $white;
+		padding: 20px;
+		box-shadow: 10px 10px 12px 0 rgba(0,0,0,.07);
+		border-radius: $b10;
+
+		ul {
+			display: flex;
+			align-items: center;
+			gap: 40px;
+		}
+
+		a {
+			font-family: $ff;
+			font-weight: $fw-regular;
+			line-height: $lh;
+			text-transform: capitalize;
+			color: $black;
+			transition: opacity ease $tr;
+
+			&:hover {
+				opacity: $op;
+			}
+		}
+	}
+}

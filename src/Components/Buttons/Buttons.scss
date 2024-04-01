@@ -1,0 +1,30 @@
+@import '../../scss/common/vars';
+@import '../../scss/common/colors';
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+
+	&.menu-button {
+		width: 45px;
+		height: 45px;
+		padding: 10px;
+		border: 2px solid rgba(255,255,255,.3);
+		box-shadow: 4px 4px 6px 0 rgba(0,0,0,.1), -4px -4px 6px rgba(255,255,255,1);
+		border-radius: $b10;
+		transition: box-shadow ease $tr;
+
+		&:hover {
+			box-shadow: 4px 4px 10px 0 rgba(0,0,0,.1), -4px -4px 10px rgba(255,255,255,1)
+		}
+
+		&.pressed {
+			box-shadow: 4px 4px 10px 0 rgba(0,0,0,.1), -4px -4px 10px rgba(255,255,255,1), 4px 4px 10px 0 rgba(0,0,0,.1) inset, -4px -4px 10px rgba(255,255,255,1) inset;
+		}
+	}
+}
