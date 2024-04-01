@@ -9,6 +9,7 @@ const Header = () => {
                 <div className="header-wrapper">
                     <a href="/" className="header-logo">
                         d3v.pro
+						<span>|</span>
                     </a>
                     <nav className="header-nav">
                     <ul>
