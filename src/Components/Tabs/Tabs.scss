@@ -1,0 +1,81 @@
+@import '../../scss/common/colors';
+@import '../../scss/common/vars';
+
+.tabs {
+	margin-top: 50px;
+
+	&-wrapper {
+		display: flex;
+	}
+
+	&-buttons {
+		display: flex;
+		flex-direction: column;
+		width: 30%;
+	}
+
+	&-contents {
+		width: calc(70% - 50px);
+		margin-left: 50px;
+	}
+
+	.tab-content {
+		display: none;
+
+		&.active {
+			display: flex;
+		}
+
+		p {
+			width: 60%;
+			color: $white;
+			margin-right: 20px;
+		}
+
+		&-img {
+			width: calc(40% - 20px);
+			position: relative;
+			height: 270px;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: $b10;
+			}
+
+			&:hover .tab-content-hidden  {
+				opacity: 1;
+			}
+		}
+
+		&-hidden {
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+			width: 100%;
+			height: 100%;
+			backdrop-filter: blur(10px);
+			position: absolute;
+			left: 0;
+			top:  0;
+			border-radius: $b10;
+			padding: 20px;
+			cursor: pointer;
+			opacity: 0;
+			transition: opacity ease $tr, backdrop-filter ease $tr;
+
+			.view {
+				font-family: $ff;
+				font-weight: $fw-regular;
+				line-height: $lh;
+				color: $white;
+				font-size: 20px;
+			}
+
+			&:active {
+				backdrop-filter: blur(20px);
+			}
+		}
+	}
+}

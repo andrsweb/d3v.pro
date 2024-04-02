@@ -1,4 +1,5 @@
 import './About.css'
+import Tabs from '../Tabs/Tabs'
 
 const About = () => {
 	return (
@@ -21,6 +22,7 @@ const About = () => {
 						</div>
 					</div>
 				</div>
+				<Tabs />
 			</div>
 		</section>
 	)
