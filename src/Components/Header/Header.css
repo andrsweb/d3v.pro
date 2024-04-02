@@ -1,5 +1,10 @@
 .header {
   padding: 20px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 .header-wrapper {
   display: flex;
@@ -28,10 +33,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f4f9fb;
-  padding: 20px;
-  box-shadow: 10px 10px 12px 0 rgba(0, 0, 0, 0.07);
-  border-radius: 10px;
 }
 .header-nav ul {
   display: flex;
