@@ -8,13 +8,22 @@ h6, .h6 {
 	font-weight: $fw-regular;
 	line-height: $lh-title;
 	margin: 0;
+
+	&.white {
+		color: $white;
+	}
+
+	&.black {
+		color: $black;
+	}
 }
 
 h1, .h1 {
 	font-size: 32px;
+	margin-bottom: 40px;
 
 	@media all and (min-width: $lg) {
-		font-size: 36px
+		font-size: 50px
 	}
 }
 
@@ -53,5 +62,18 @@ a {
 }
 
 p {
+	font-family: $ff;
+	font-weight: $fw-regular;
+	line-height: $lh;
+	font-size: 20px;
     margin: 0;
+	padding: 0;
+
+	&.white {
+		color: $white;
+	}
+
+	&.black {
+		color: $black;
+	}
 }

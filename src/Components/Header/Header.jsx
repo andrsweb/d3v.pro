@@ -20,12 +20,12 @@ const Header = () => {
                         </li>
                         <li>
                             <a href="#">
-                                Experience
+                                Projects
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                Projects
+                                Prices
                             </a>
                         </li>
                         <li>
