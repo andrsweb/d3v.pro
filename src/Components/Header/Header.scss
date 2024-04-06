@@ -2,16 +2,94 @@
 
 .header {
 	padding: 20px 0;
-	position: fixed;
-	left: 0;
-	top: 0;
 	width: 100%;
-	z-index: 100;
 
 	&-wrapper {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		animation: opacityOff 0.5s forwards ease;
+			z-index: 100;
+
+		@keyframes opacityOff {
+			0% {
+				scale: 0;
+			}
+
+			100% {
+				scale: 1;
+			}
+		}
+	}
+
+	&.scrolled {
+		background-color: transparent;
+		box-shadow: none;
+
+		.header-logo {
+			transform: translateX(0);
+			animation: move1 0.5s forwards ease;
+
+			@keyframes move1 {
+				0% {
+					transform: translateY(0);
+				}
+
+				100% {
+					transform: translateY(-500px);
+				}
+			}
+		}
+
+		.header-nav {
+			animation: move3 0.5s forwards ease;
+			z-index: 100;
+
+			@media all and (min-width: $lg) {
+				@keyframes move3 {
+					0% {
+						transform: translateX(0);
+					}
+	
+					50% {
+						transform: translateX(500px);
+					}
+	
+					100% {
+						opacity: 1;
+						right: 30px;
+						top: 0;
+						transform: translateX(0);
+						background-color: $white;
+						padding: 10px;
+						box-shadow: 10px 10px 12px 0 rgba(0,0,0,.07);
+						border-radius: $b10;
+					}
+				}
+			}
+
+			ul {
+				animation: move4 0.2s forwards ease;
+
+				@keyframes move4 {
+					0% {
+						flex-direction: row;
+					}
+
+					75% {
+						flex-direction: row;
+					}
+
+					100% {
+						flex-direction: column;
+					}
+				}
+			}
+
+			.hidden {
+				display: flex;
+			}
+		}
 	}
 
 	&-logo {
@@ -20,6 +98,17 @@
 		line-height: $lh-title;
 		font-size: 40px;
 		color: $black;
+		animation: move 0.5s forwards ease;
+
+		@keyframes move {
+			0% {
+				transform: translateY(-500px);
+			}
+
+			100% {
+				transform: translateY(0);
+			}
+		}
 
 		span {
 			animation: cursor 0.5s infinite alternate-reverse linear;
@@ -37,18 +126,30 @@
 	}
 
 	&-nav {
+		position: fixed;
+		right: 30px;
+		top: 23px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		// background-color: $white;
-		// padding: 20px;
-		// box-shadow: 10px 10px 12px 0 rgba(0,0,0,.07);
-		// border-radius: $b10;
+		transition: background-color ease $tr, box-shadow ease $tr,
+			padding ease $tr, border-radius ease $tr;
 
 		ul {
 			display: flex;
 			align-items: center;
-			gap: 40px;
+			gap: 20px;
+			animation: fadeIn 1s forwards ease;
+
+			@keyframes fadeIn {
+				0% {
+					transform: translateX(500px);
+				}
+
+				100% {
+					transform: translateX(0);
+				}
+			}
 		}
 
 		a {
@@ -62,6 +163,27 @@
 			&:hover {
 				opacity: $op;
 			}
+
+			
+
+			.circle {
+				display: none;
+				justify-content: center;
+				align-items: center;
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				border: 2px solid $black;
+				transition: background-color ease $tr;
+
+				&.filled {
+					background-color: $black;
+				}
+			}
 		}
+	}
+
+	.hidden {
+		display: none;
 	}
 }

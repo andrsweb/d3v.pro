@@ -1,13 +1,73 @@
+@import '../../scss/common/colors';
+@import '../../scss/common/vars';
+
 .hero {
-	padding-top: 92px;
+	padding: 30px 0 80px;
+
+	&-wrapper {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+
+	&-info {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+
+		p {
+			font-size: 25px;
+
+			span {
+				color: $accent;
+			}
+		}
+	}
+
+	&-links {
+		display: flex;
+		gap: 20px;
+		margin-top: auto;
+	}
 
 	&-video {
-		width: 100%;
-		min-height: 100dvh;
+		width: 620px;
+		height: 480px;
+	}
 
-		video {
+	&-img {
+		position: relative;
+		width: 600px;
+		height: 480px;
+
+		img {
 			width: 100%;
 			height: 100%;
+		}
+		
+		video {
+			position: absolute;
+			left: 50%;
+			top: 25px;
+			transform: translateX(-50%);
+			width: 550px;
+			height: 310px;
+		}
+
+		.power {
+			cursor: pointer;
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			left: 50%;
+			bottom: 80px;
+			transform: translateX(-50%);
+			transition: opacity ease $tr;
+
+			&:hover {
+				opacity: $op;
+			}
 		}
 	}
 }

@@ -1,0 +1,22 @@
+.link {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-family: "Zekton Rg", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 10px;
+  background-color: #f4f9fb;
+  box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.1), -4px -4px 6px rgb(255, 255, 255);
+  border-radius: 10px;
+  transition: background-color ease 0.3s, color ease 0.3s, box-shadow ease 0.3s;
+}
+.link:hover {
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1), -4px -4px 10px rgb(255, 255, 255);
+}
+.link img {
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=Link.css.map */

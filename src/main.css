@@ -53,11 +53,13 @@ h6.black, .h6.black {
 
 h1, .h1 {
   font-size: 32px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  color: #87232f;
+  text-transform: uppercase;
 }
 @media all and (min-width: 992px) {
   h1, .h1 {
-    font-size: 50px;
+    font-size: 70px;
   }
 }
 
@@ -112,6 +114,17 @@ p.black {
   color: #150b04;
 }
 
+li {
+  font-family: "Zekton Rg", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+li:last-child {
+  margin-bottom: 0;
+}
+
 .container {
   width: 100%;
   max-width: 100%;
@@ -130,7 +143,7 @@ p.black {
 }
 @media all and (min-width: 1200px) {
   .container {
-    max-width: 1400px;
+    max-width: 1500px;
   }
 }
 .container-fluid {
@@ -171,6 +184,12 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  outline: 0;
 }
 
 #root {

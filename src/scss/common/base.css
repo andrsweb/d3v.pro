@@ -1,0 +1,51 @@
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  margin: 0;
+}
+
+body {
+  position: relative;
+  min-width: 300px;
+  display: flex;
+  height: auto;
+  font-family: "Zekton Rg", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #150b04;
+  background-color: #f4f9fb;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  outline: 0;
+}
+
+#root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+#root .footer {
+  margin-top: auto;
+}/*# sourceMappingURL=base.css.map */
