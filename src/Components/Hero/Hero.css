@@ -1,5 +1,6 @@
 .hero {
   padding: 30px 0 80px;
+  background-color: #150b04;
 }
 .hero-wrapper {
   display: flex;
