@@ -1,9 +1,9 @@
 import './Link.css'
 
-const Link = ({href, src}) => {
+const Link = ({href, text}) => {
 	return (
 		<a href={href} className="link" target='_blanc'>
-			<img src={src} alt="" />
+			<span>{text}</span>
 		</a>
 	)
 }

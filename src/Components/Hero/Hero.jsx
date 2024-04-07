@@ -1,43 +1,29 @@
 import './Hero.css'
 import Link from '../Links/Link'
-import video from '../../video/intro.mp4'
-import mac from '../../img/mac.png'
-import li from '../../img/li.svg'
-import x from '../../img/x.svg'
-import git from '../../img/git.svg'
-import wars from '../../img/wars.svg'
-import off from '../../img/off.svg'
+import fire from '../../img/fire.gif'
 
 
 const Hero = () => {
 	return (
 		<div className="hero">
 			<div className="container">
-				<h1>Creative full-stack developer</h1>
+				<div className="hero-titles">
+					<h1>
+						D3v.pRo
+						<img className='fire1' src={fire} alt="" />
+					</h1>
+					<h2 className='center'>
+						Creative full-stack development
+					</h2>
+					
+				</div>
 				<div className="hero-wrapper">
-					<div className="hero-info">
-						<p>
-							🖐️Hi there! <br /> <br />
-								I'm a <span>full-stack developer</span> who loves crafting comprehensive digital solutions. <br /><br /> Let's build something amazing together!
-						</p>
-						<div className="hero-links">
-							<Link href="#" src={git} />
-							<Link href="#" src={li} />
-							<Link href="#" src={x} />
-							<Link href="#" src={wars} />
-						</div>
+					<p>
+						I'm a <span>full-stack developer</span> who loves crafting comprehensive digital solutions. <br /><br /> Let's build something amazing together!
+					</p>
+					<div className="hero-links">
+						<Link href="#" text="Contact me" />
 					</div>
-					<div className="hero-video">
-						<div className="hero-img">
-							<img src={mac} alt="" />
-							<button className='power'>
-								<img className='' src={off} alt="" />
-							</button>
-							<video playsInline autoPlay muted loop>
-								<source src={video} type="video/mp4" />
-							</video>
-						</div>
-					</div>				
 				</div>
 			</div>
 		</div>

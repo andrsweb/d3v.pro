@@ -1,9 +1,9 @@
 import './Buttons.css'
 
-const MenuButton = ({src}) => {
+const MenuButton = ({text}) => {
 	return (
 		<button className="button menu-button">
-			<img src={src} alt="Menu button" />
+			<span>{text}</span>
 		</button>
 	)
 }

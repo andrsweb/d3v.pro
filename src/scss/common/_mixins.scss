@@ -8,3 +8,51 @@
 	box-shadow: rgba(0, 0, 0, 0.9) 0px 5px 10px 15px;
 	z-index: 1;
 }
+
+@mixin btnStyle() {
+	background-color: $black;
+	transition: box-shadow ease $tr;
+	animation: forShadow 2s linear infinite alternate-reverse;
+
+	@keyframes forShadow {
+		0% {
+			box-shadow: rgba(240, 140, 46, 0.4) 1px 1px, rgba(240, 156, 46, 0.3) 2px 2px, rgba(240, 107, 46, 0.2) 3px 3px, rgba(240, 101, 46, 0.1) 5px 5px, rgba(240, 156, 46, 0.05) 10px 10px;
+		}
+
+		100% {
+			box-shadow: rgba(240, 140, 46, 0.4) 3px 3px, rgba(240, 156, 46, 0.3) 5px 5px, rgba(240, 107, 46, 0.2) 7px 7px, rgba(240, 101, 46, 0.1) 10px 10px, rgba(240, 156, 46, 0.05) 12px 12px;
+		}
+	}
+
+
+	span {
+		background-image: url("../../img/fire.png");
+		background-position: 0 -500px;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: fire 3s alternate-reverse infinite;
+
+		@keyframes fire {
+			0% {
+				background-position: 0% -30%;
+			}
+			100% {
+				background-position: 0% -24%;
+			}
+		}
+	}
+
+	&:hover {
+		animation: forShadow1 2s linear infinite alternate-reverse;
+
+		@keyframes forShadow1 {
+			0% {
+				box-shadow: rgba(240, 140, 46, 0.4) 11px 11px, rgba(240, 156, 46, 0.3) 2px 2px, rgba(240, 107, 46, 0.2) 3px 3px, rgba(240, 101, 46, 0.1) 5px 5px, rgba(240, 156, 46, 0.05) 10px 10px;
+			}
+
+			100% {
+				box-shadow: rgba(240, 140, 46, 0.4) 3px 3px, rgba(240, 156, 46, 0.3) 8px 5px, rgba(240, 107, 46, 0.2) 7px 7px, rgba(240, 101, 46, 0.1) 10px 10px, rgba(240, 156, 46, 0.05) 12px 12px;
+			}
+		}
+	}
+}

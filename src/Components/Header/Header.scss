@@ -3,10 +3,18 @@
 .header {
 	padding: 20px 0;
 	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+
+	.container {
+		max-width: 1900px;
+	}
 
 	&-wrapper {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-end;
 		align-items: center;
 		animation: opacityOff 0.5s forwards ease;
 			z-index: 100;
@@ -23,112 +31,10 @@
 	}
 
 	&.scrolled {
-		background-color: transparent;
-		box-shadow: none;
-
-		.header-logo {
-			transform: translateX(0);
-			animation: move1 0.5s forwards ease;
-
-			@keyframes move1 {
-				0% {
-					transform: translateY(0);
-				}
-
-				100% {
-					transform: translateY(-500px);
-				}
-			}
-		}
-
-		.header-nav {
-			animation: move3 0.5s forwards ease;
-			z-index: 100;
-
-			@media all and (min-width: $lg) {
-				@keyframes move3 {
-					0% {
-						transform: translateX(0);
-					}
-	
-					50% {
-						transform: translateX(500px);
-					}
-	
-					100% {
-						opacity: 1;
-						right: 30px;
-						top: 0;
-						transform: translateX(0);
-						background-color: $white;
-						padding: 10px;
-						box-shadow: 10px 10px 12px 0 rgba(0,0,0,.07);
-						border-radius: $b10;
-					}
-				}
-			}
-
-			ul {
-				animation: move4 0.2s forwards ease;
-
-				@keyframes move4 {
-					0% {
-						flex-direction: row;
-					}
-
-					75% {
-						flex-direction: row;
-					}
-
-					100% {
-						flex-direction: column;
-					}
-				}
-			}
-
-			.hidden {
-				display: flex;
-			}
-		}
 	}
 
-	&-logo {
-		font-family: $ff-logo;
-		font-weight: $fw-regular;
-		line-height: $lh-title;
-		font-size: 40px;
-		color: $black;
-		animation: move 0.5s forwards ease;
-
-		@keyframes move {
-			0% {
-				transform: translateY(-500px);
-			}
-
-			100% {
-				transform: translateY(0);
-			}
-		}
-
-		span {
-			animation: cursor 0.5s infinite alternate-reverse linear;
-
-			@keyframes cursor {
-				0% {
-					opacity: 0;
-				}
-
-				100% {
-					opacity: 1;
-				}
-			}
-		}
-	}
 
 	&-nav {
-		position: fixed;
-		right: 30px;
-		top: 23px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -139,17 +45,6 @@
 			display: flex;
 			align-items: center;
 			gap: 20px;
-			animation: fadeIn 1s forwards ease;
-
-			@keyframes fadeIn {
-				0% {
-					transform: translateX(500px);
-				}
-
-				100% {
-					transform: translateX(0);
-				}
-			}
 		}
 
 		a {

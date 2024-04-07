@@ -1,8 +1,9 @@
 @import '../../scss/common/vars';
 @import '../../scss/common/colors';
+@import '../../scss/common/mixins';
 
 .button {
-	font-family: $ff;
+	font-family: $ff-logo;
 	font-weight: $fw-regular;
 	font-size: 20px;
 	display: flex;
@@ -16,39 +17,9 @@
 	cursor: pointer;
 
 	&.menu-button {
-		width: 45px;
-		height: 45px;
+		@include btnStyle();
+
+		height: 50px;
 		padding: 10px;
-		border: 2px solid rgba(255,255,255,.3);
-		background-color: $white;
-		box-shadow: 4px 4px 6px 0 rgba(0,0,0,.1), -4px -4px 6px rgba(255,255,255,1);
-		border-radius: $b10;
-		transition: box-shadow ease $tr;
-
-		&:hover {
-			box-shadow: 4px 4px 10px 0 rgba(0,0,0,.1), -4px -4px 10px rgba(255,255,255,1)
-		}
-
-		&.pressed {
-			box-shadow: 4px 4px 10px 0 rgba(0,0,0,.1), -4px -4px 10px rgba(255,255,255,1), 4px 4px 10px 0 rgba(0,0,0,.1) inset, -4px -4px 10px rgba(255,255,255,1) inset;
-		}
-	}
-
-	&.tab-button {
-		background-color: $white;
-		margin-bottom: 20px;
-		padding: 10px;
-		color: $black;
-		border-radius: $b10;
-		
-		&:last-child {
-			margin-bottom: 0;
-		}
-
-		&.active {
-			background-color: $accent;
-			color: $white;
-			box-shadow: #490e14 3px 3px 6px 0px inset, #c74352 -3px -3px 6px 1px inset;
-		}
 	}
 }
